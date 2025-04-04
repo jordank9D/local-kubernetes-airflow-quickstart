@@ -7,8 +7,9 @@ This repo helps you deploy airflow to a local kubernetes cluster.
 1. Install `kubectl`
 2. Run a local kubernetes cluster (e.g. Docker Desktop, minikube)
 3. Install helm (e.g. `brew install helm`)
-4. Point `kubectl` at your cluster (e.g. `kubectl config use-context docker-desktop`)
-5. Run `./install.sh`
+4. In docker-desktop dashboard go to: Settings > Kubernetes > Enable Kubernetes > Apply & Restart
+5. Point `kubectl` at your cluster (e.g. `kubectl config use-context docker-desktop`)
+6. Run `./install.sh`
 
 This will create an `airflow` namespace and deploy airflow to it.
 
@@ -42,12 +43,3 @@ From the UI, you can create the DB connection:
 # Uninstallation
 
 Run `./uninstall.sh`. It can take a long time for the namespace to be deleted.
-
-# Troubleshooting
-
-If you're having issues when installing/setting it up check for your error message in this section to see if it can be resolved.
-
-<details>
-  <summary>error: no context exists with the name: "docker-desktop"</summary>
-Make sure you have docker-desktop installed and running. Then on the docker-desktop dashboard go to: Settings > Kubernetes > Enable Kubernetes > Apply & Restart
-</details>
